@@ -13,9 +13,9 @@ const models = require('express-cassandra');
 */
 sendData = () => {
   const john = new models.instance.Person({
-    name: 'Capo',
-    surname: 'Canionieri',
-    age: 50,
+    name: 'Julieta',
+    surname: 'hoy',
+    age: 33,
     created: { $db_function: 'toTimestamp(now())' },
   });
   john.save(function (err) {
@@ -38,7 +38,7 @@ showData = () => {
 
 exports.getPost = function (req, res, next) {
   //res.send(changeText());
-  res.send('helloooow res from router');
+  res.send('Message from the getPost, working fine');
   console.log('sending from router');
 };
 
